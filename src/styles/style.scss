@@ -1,0 +1,8 @@
+@use "config/reset" as *;
+@use "config/variaveis" as *;
+
+$bgColor: blue;
+
+body {
+    background-color: $bgColor;
+}
