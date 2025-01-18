@@ -3,8 +3,10 @@
 @use "config/texts" as *;
 @use "components/Hero";
 
+//todo Body
 body {
     background-color: $backgroundColor;
+    font-family: $fontFamily;
 }
 
 //todo Textos
@@ -37,5 +39,3 @@ body {
     @include text(18px);
     color: $primaryTextColor;
 }
-
-//todo Fim Textos

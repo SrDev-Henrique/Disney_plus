@@ -5,6 +5,7 @@
     height: 100vh;
     background-image: url(/dist/images/hero_desktop.jpeg);
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
 
     &__content {
@@ -42,12 +43,16 @@
             }
         }
 
-        .pricing-disclaimer {
-            margin-top: 60px;
+        .title--small {
+            margin-bottom: 60px;
         }
 
         .pricing-p {
             margin-bottom: 20px;
+        }
+
+        .pricing-disclaimer {
+            margin-top: 40px;
         }
     }
 }
