@@ -1,0 +1,54 @@
+@use 'ui/button' as *;
+
+.plans {
+    padding: 5.6vw;
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+        margin-top: 50px;
+        
+        &__item {
+            text-align: center;
+            padding: 60px 0px 44px;
+            max-width: 380px;
+            width: 100%;
+
+            &:nth-child(2) {
+                background-image: url(/dist/images/fundo_combo_plus.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                
+            }
+
+            .plans-img {
+                width: 100%;
+            }
+
+            .plans-p {
+                max-width: 280px;
+                width: 100%;
+                display: inline-block;
+            }
+
+            .plans-price {
+                display: block;
+            }
+
+            .plans-button {
+                @include primaryButton;
+                display: inline;
+                max-width: 280px;
+            }
+        }
+    }
+
+    .choose-plans {
+        text-align: center;
+    }
+
+    .plans-disclaimer {
+        text-align: center;
+    }
+}

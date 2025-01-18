@@ -16,3 +16,10 @@
   color: $white;
   text-transform: uppercase;
 }
+
+@mixin buttonText($fontSize: 18px) {
+  @include text($fontSize);
+  color: $white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
