@@ -3,10 +3,16 @@
 @mixin text($fontSize: 12px) {
   font-size: $fontSize;
   line-height: $fontSize + 10px;
-  color: $secondaryTextColor;
+  color: $silver;
 }
 
 @mixin title($fontSize: 28px) {
   @include text($fontSize);
-  color: $primaryTextColor;
+  color: $white;
+}
+
+@mixin tabText($fontSize: 20px) {
+  @include text($fontSize);
+  color: $white;
+  text-transform: uppercase;
 }

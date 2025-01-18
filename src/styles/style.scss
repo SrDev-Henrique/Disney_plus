@@ -2,11 +2,11 @@
 @use "config/variaveis" as *;
 @use "config/texts" as *;
 @use "components/Hero";
+@use "components/Shows";
 
 //todo Body
 body {
     background-color: $backgroundColor;
-    font-family: $fontFamily;
 }
 
 //todo Textos
@@ -37,5 +37,5 @@ body {
 
 .link--text {
     @include text(18px);
-    color: $primaryTextColor;
+    color: $white;
 }
