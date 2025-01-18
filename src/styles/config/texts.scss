@@ -1,0 +1,12 @@
+@use "./config/variaveis" as *;
+
+@mixin text($fontSize: 12px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+  color: $secondaryTextColor;
+}
+
+@mixin title($fontSize: 28px) {
+  @include text($fontSize);
+  color: $primaryTextColor;
+}

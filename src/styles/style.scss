@@ -1,8 +1,41 @@
 @use "config/reset" as *;
 @use "config/variaveis" as *;
-
-$bgColor: blue;
+@use "config/texts" as *;
+@use "components/Hero";
 
 body {
-    background-color: $bgColor;
+    background-color: $backgroundColor;
 }
+
+//todo Textos
+
+.text--small {
+    @include text;
+}
+
+.text {
+    @include text(16px);
+}
+
+.text--big {
+    @include text(18px)
+}
+
+.title--small {
+    @include title;
+}
+
+.title {
+    @include title(40px)
+}
+
+.title--big {
+    @include title(44px)
+}
+
+.link--text {
+    @include text(18px);
+    color: $primaryTextColor;
+}
+
+//todo Fim Textos
