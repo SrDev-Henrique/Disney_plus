@@ -1,12 +1,30 @@
 .devices {
     padding: 5.6vw;
 
+    &__title {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
 
         &__item {
             text-align: center;
+
+            &__title {
+                margin-top: 20px;
+                margin-bottom: 24px;
+            }
+
+            &__ul {
+
+                &__li {
+                    list-style: none;
+                }
+            }
 
             &__img {
                 max-width: 100%;
