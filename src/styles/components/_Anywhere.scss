@@ -1,0 +1,18 @@
+.anywhere {
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    &__content {
+        padding: 0 2vw;
+
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+
+    .anywhere-img {
+        max-width: 100%;
+    }
+}
