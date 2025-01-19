@@ -65,6 +65,11 @@
                         padding: 12px 0;
                     }
                 }
+
+                a {
+                    color: $white;
+                    text-decoration: underline $white;
+                }
             }
         }
     }
