@@ -67,8 +67,7 @@
                 }
 
                 a {
-                    color: $white;
-                    text-decoration: underline $white;
+                    @include linkText;
                 }
             }
         }

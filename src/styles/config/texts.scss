@@ -28,3 +28,8 @@
   @include text($fontSize);
   color: $pureWhite;
 }
+
+@mixin linkText() {
+  color: $white;
+  text-decoration: underline $white;
+}
