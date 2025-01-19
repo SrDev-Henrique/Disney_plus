@@ -1,0 +1,59 @@
+@use "../config/variaveis" as *;
+@use "../config/texts" as *;
+
+.faq {
+    padding: 5.6vw;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__questions {
+
+        &__item {
+            background-color: $faqBackground;
+            margin-bottom: 16px;
+            list-style: none;
+
+            &--is-open {
+
+                .faq__questions__item__answer {
+                    height: auto;
+                    padding: 0 24px 24px;
+                }
+
+                .faq__questions__item__question::after {
+                    content: '-';
+                    font-size: 70px;
+                }
+            }
+
+            &__question {
+                @include faqText;
+                padding: 24px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    font-size: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            &__answer {
+                height: 0;
+                padding: 0 24px;
+                transition: .3s;
+                overflow: hidden;
+            }
+        }
+    }
+}

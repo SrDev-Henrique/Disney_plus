@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("[data-tab-button]");
+  const questions = document.querySelectorAll("[data-faq-question]");
 
   buttons.forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -13,7 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
       event.target.classList.add("shows__tabs__button--is-active");
     });
   });
+
+  questions.forEach((question) => {
+    question.addEventListener('click', openAnswer);
+  });
 });
+
+function openAnswer(element) {
+  const faqAnswer = element.target.parentNode;
+  faqAnswer.classList.toggle("faq__questions__item--is-open");
+}
 
 function resetButtons() {
   const buttons = document.querySelectorAll("[data-tab-button]");
