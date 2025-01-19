@@ -1,54 +1,53 @@
-@use 'ui/button' as *;
+@use "ui/button" as *;
 
 .plans {
-    padding: 5.6vw;
+  padding: 5.6vw;
 
-    &__list {
-        display: flex;
-        justify-content: space-around;
-        gap: 50px;
-        margin-top: 50px;
-        
-        &__item {
-            text-align: center;
-            padding: 60px 0px 44px;
-            max-width: 380px;
-            width: 100%;
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    margin-top: 50px;
 
-            &:nth-child(2) {
-                background-image: url(/dist/images/fundo_combo_plus.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-                
-            }
+    &__item {
+      text-align: center;
+      padding: 60px 0px 44px;
+      max-width: 380px;
+      width: 100%;
 
-            .plans-img {
-                width: 100%;
-            }
+      &:nth-child(2) {
+        background-image: url(/dist/images/fundo_combo_plus.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
 
-            .plans-p {
-                max-width: 280px;
-                width: 100%;
-                display: inline-block;
-            }
+      &__img {
+        width: 100%;
+      }
 
-            .plans-price {
-                display: block;
-            }
+      &__p {
+        max-width: 280px;
+        width: 100%;
+        display: inline-block;
+      }
 
-            .plans-button {
-                @include primaryButton;
-                display: inline;
-                max-width: 280px;
-            }
-        }
+      &__price {
+        display: block;
+      }
+
+      &__button {
+        @include primaryButton;
+        display: inline;
+        max-width: 280px;
+      }
     }
+  }
 
-    .choose-plans {
-        text-align: center;
-    }
+  &__choose {
+    text-align: center;
+  }
 
-    .plans-disclaimer {
-        text-align: center;
-    }
+  &__disclaimer {
+    text-align: center;
+  }
 }

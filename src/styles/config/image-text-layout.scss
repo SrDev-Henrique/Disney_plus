@@ -1,0 +1,38 @@
+.image-text-section {
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    position: relative;
+
+    &--image-full-width {
+        display: block;
+
+        &__content {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: calc(50% - 5.6vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        padding: 0 2vw;
+
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-img {
+        max-width: 100%;
+    }
+}

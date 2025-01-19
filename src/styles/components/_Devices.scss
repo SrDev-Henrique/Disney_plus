@@ -1,0 +1,17 @@
+.devices {
+    padding: 5.6vw;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        &__item {
+            text-align: center;
+
+            &__img {
+                max-width: 100%;
+            }
+
+        }
+    }
+}

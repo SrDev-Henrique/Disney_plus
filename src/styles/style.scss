@@ -4,7 +4,8 @@
 @use "components/Hero";
 @use "components/Shows";
 @use "components/Plans";
-@use "components/Anywhere";
+@use "config/image-text-layout";
+@use "components/Devices";
 
 //todo Body
 body {
