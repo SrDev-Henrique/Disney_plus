@@ -10,6 +10,10 @@
         text-align: center;
         padding: 3.6vw 0;
 
+        @media (max-width: $mobile) {
+            padding: 3.6vw;
+        }
+
         &__logo {
             width: 80px;
             margin: 0 auto 10px;

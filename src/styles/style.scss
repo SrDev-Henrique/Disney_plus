@@ -19,26 +19,50 @@ body {
 
 .text--small {
     @include text;
+
+    @media(max-width: $mobile) {
+        @include text(11px);
+    }
 }
 
 .text {
     @include text(16px);
+
+    @media(max-width: $mobile) {
+        @include text(14px);
+    }
 }
 
 .text--big {
-    @include text(18px)
+    @include text(18px);
+
+    @media(max-width: $mobile) {
+        @include text(15px);
+    }
 }
 
 .title--small {
     @include title;
+
+    @media (max-width: $mobile) {
+        @include title(22px);
+    }
 }
 
 .title {
-    @include title(40px)
+    @include title(40px);
+
+    @media(max-width: $mobile) {
+        @include title(24px);
+    }
 }
 
 .title--big {
-    @include title(44px)
+    @include title(44px);
+
+    @media (max-width: $mobile) {
+        @include title(26px);
+    }
 }
 
 .link--text {

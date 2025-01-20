@@ -1,4 +1,5 @@
 @use "ui/button" as *;
+@use "../config/variaveis" as *;
 
 .header {
   position: sticky;
@@ -23,6 +24,10 @@
     display: flex;
     justify-content: space-between;
     padding: 8px 16px;
+
+    @media (max-width: $mobile) {
+      padding: 0 12px 0 20px;
+    }
   }
 
   &__logo {
@@ -31,6 +36,10 @@
     width: 100%;
     margin: 5px;
     transition: .3s;
+
+    @media (max-width: $mobile) {
+      max-width: 64px;
+    }
   }
 
   &__links {
@@ -46,10 +55,10 @@
       }
 
       &:nth-child(1) a {
-        @include secondaryButton;
         opacity: 0;
         transition: .3s;
         visibility: hidden;
+        @include secondaryButton;
       }
 
       &:nth-child(2) a {

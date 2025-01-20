@@ -1,3 +1,5 @@
+@use "../config/variaveis" as *;
+
 .devices {
     padding: 5.6vw;
 
@@ -10,6 +12,10 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
+
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         &__item {
             text-align: center;

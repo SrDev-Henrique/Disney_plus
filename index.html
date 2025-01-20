@@ -253,11 +253,14 @@
     </section>
 
     <section class="image-text-section image-text-section--image-full-width">
-      <img
-        class="image-text-section-img image-text-section--image-full-width-img"
-        src="./dist/images/fundo_rei_leao.png"
-        alt=""
-      />
+      <picture>
+        <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png" />
+        <img
+          class="image-text-section-img image-text-section--image-full-width-img"
+          src="./dist/images/fundo_rei_leao.png"
+          alt=""
+        />
+      </picture>
       <div
         class="image-text-section__content image-text-section--image-full-width__content"
       >

@@ -29,13 +29,20 @@
   &:hover {
     filter: brightness(1.1);
   }
+
+  @media (max-width: $mobile) {
+    font-size: 13px;
+    padding: 8px 11px;
+    height: 40px;
+    letter-spacing: 0;
+  }
 }
 
 @mixin darkButton {
+  border: 1px solid $silver;
+  background-color: $buttonBlack;
   @include buttonText;
   @include secondaryButton;
-  background-color: $buttonBlack;
-  border: 1px solid $silver;
   
   &:hover {
     background-color: $white;

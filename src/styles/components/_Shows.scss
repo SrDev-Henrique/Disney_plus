@@ -11,6 +11,10 @@
     gap: 24px;
     margin-top: 44px;
 
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     &--is-active {
       display: grid;
     }
@@ -36,6 +40,17 @@
   &__tabs {
     display: flex;
     justify-content: center;
+
+    @media (max-width: $mobile) {
+        white-space: nowrap;
+        overflow-x: scroll;
+        padding-left: 20px;
+        margin-top: 12rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+      }
 
     &__button {
       @include tabText;
