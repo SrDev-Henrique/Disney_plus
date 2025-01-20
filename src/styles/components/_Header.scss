@@ -1,15 +1,36 @@
 @use "ui/button" as *;
 
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  z-index: 1000;
+
+  &--scrolled {
+    backdrop-filter: blur(3px) brightness(20%);
+    box-shadow: 0 2px 30px 15px rgba(0, 0, 0, 0.6);
+  
+    .header {
+      &__logo, &__links__item:first-child a {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
   &__container {
-    padding: 8px 36px;
     display: flex;
     justify-content: space-between;
+    padding: 8px 16px;
   }
 
   &__logo {
+    opacity: 0;
     max-width: 80px;
     width: 100%;
+    margin: 5px;
+    transition: .3s;
   }
 
   &__links {
@@ -21,23 +42,20 @@
       list-style: none;
 
       a {
+        @extend .link-button;
+      }
+
+      &:nth-child(1) a {
         @include secondaryButton;
-        display: flex;
-        align-items: center;        
-        text-decoration: none;
-        padding: 8px 16px;
+        opacity: 0;
+        transition: .3s;
+        visibility: hidden;
       }
 
-      &:nth-child(2) {
-        a {
-          @include darkButton;
-          display: flex;
-          align-items: center;        
-          text-decoration: none;
-          padding: 8px 16px;
-        }
+      &:nth-child(2) a {
+        @include darkButton;
       }
-
     }
   }
 }
+

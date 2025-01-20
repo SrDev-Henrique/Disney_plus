@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("[data-tab-button]");
   const questions = document.querySelectorAll("[data-faq-question]");
+  const header = document.querySelector(".header");
+  const heroSection = document.querySelector(".hero");
+  const heroHeight = heroSection.clientHeight;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < heroHeight) {
+      header.classList.remove("header--scrolled");
+    } else {
+      header.classList.add("header--scrolled");
+    }
+  });
 
   buttons.forEach((button) => {
     button.addEventListener("click", (event) => {
