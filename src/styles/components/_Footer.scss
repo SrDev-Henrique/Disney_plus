@@ -1,3 +1,6 @@
+@use "../config/texts" as *;
+@use "../config/variaveis" as *;
+
 .footer {
 
     &__container {
@@ -5,5 +8,61 @@
         width: 100%;
         margin: 0 auto;
         text-align: center;
+        padding: 3.6vw 0;
+
+        &__logo {
+            width: 80px;
+            margin: 0 auto 10px;
+        }
+
+        &__links {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+
+            &__item {
+                display: inline-flex;
+                align-items: center;
+                padding: 16px 0 0 16px;
+                
+                a {
+                    @include text(14px);
+                    text-decoration: none;
+                    display: block;
+
+                    &:hover {
+                        color: $pureWhite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.language-selector { 
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 18px;
+        width: 18px;
+    }
+
+    select {
+        height: 38px;
+        background-color: transparent;
+        border: none;
+        color: $pureWhite;
+
+        &:hover {
+            color: $silver;
+        }
+
+        option {
+            color: $backgroundColor;
+        }
     }
 }
