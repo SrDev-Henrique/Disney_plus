@@ -39,10 +39,10 @@
 }
 
 @mixin darkButton {
-  border: 1px solid $silver;
-  background-color: $buttonBlack;
   @include buttonText;
   @include secondaryButton;
+  border: 1px solid $silver;
+  background-color: $buttonBlack;
   
   &:hover {
     background-color: $white;
